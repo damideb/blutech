@@ -2,8 +2,8 @@
 
 # Operation of Application
 
-The page shows 11 products gotten from an API
-Users can search for products by the SKU number
+The page shows 11 products gotten from an API. 
+ Users can search for products by the SKU number
 
 # API
 http://3.88.1.181:8000/products/public/catalog?supplier=FragranceX
