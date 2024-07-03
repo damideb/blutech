@@ -9,15 +9,16 @@ const ContextProvider: React.FC<{ children: React.ReactNode }> = ({
   }) => {
 
     const [products, setProducts] = useState<Product[]>([])
+    const[searchedProduct, setSearchedProduct] = useState<Product[]>([])
     const[loading, setLoading] = useState(true)
 
    const getProducts = async()=>{
     try{
       const res=  await fetch ('http://3.88.1.181:8000/products/public/catalog?supplier=FragranceX')
         const data = await res.json()
-        const sliced = data.slice(0,11)
-        console.log(data)
-        setProducts(sliced)
+        const slicedData = data.slice(0,11)
+        setProducts(slicedData)
+        setSearchedProduct(slicedData)
        
     }
     catch(err){
@@ -30,7 +31,7 @@ const ContextProvider: React.FC<{ children: React.ReactNode }> = ({
 
     return(
         
-        <Context.Provider value={{products, getProducts, loading}}>
+        <Context.Provider value={{products, setProducts, getProducts, loading, setSearchedProduct, searchedProduct}}>
             {children}
         </Context.Provider>
 

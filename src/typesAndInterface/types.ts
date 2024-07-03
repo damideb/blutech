@@ -1,20 +1,14 @@
 
 export type Product ={
  
-    Image_1: string;
-  SKU:string;
+  Image_1: string;
+  SKU:number;
   Name:string;
   Title:string;
   Description:string;
   Brand:string;
-  CostPrice:string;
-  Quantity:string;
+  Quantity:number;
   size:string;
-  "Cost Price":string
-  
-
-
-    
-    
+  "Cost Price":number  
     
 }

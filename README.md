@@ -1,30 +1,20 @@
-# React + TypeScript + Vite
+# ASSESMENT
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Operation of Application
 
-Currently, two official plugins are available:
+The page shows 11 products gotten from an API
+Users can search for products by the SKU number
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# API
+http://3.88.1.181:8000/products/public/catalog?supplier=FragranceX
 
-## Expanding the ESLint configuration
+# Task
+1. UI Implementation
+   - Use the provided Figma design: (https://www.figma.com/design/5YoDO1EKuVGMJK77g2CY43/Blutech-solution?node-id=425-359&t=fCesi5WRWJUPge5L-0).
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+2. API Integration
+   - Use the API endpoint provided in the documentation:  (http://3.88.1.181:8000/docs). render the data to the data table base on how it is fethed  from the endpoint
+ - endpoint: http://3.88.1.181:8000/products/public/catalog
+   - Manage state using API Context.
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list

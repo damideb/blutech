@@ -9,7 +9,7 @@ import { StoreContext } from "../typesAndInterface/interface";
 
 export default function TableList() {
 
-  const {getProducts, loading, products} = useContext(Context) as StoreContext
+  const {getProducts, loading, searchedProduct} = useContext(Context) as StoreContext
 
   
   useEffect(()=>{
@@ -51,50 +51,49 @@ export default function TableList() {
 
         ) :
         <div className="w-full overflow-auto">
+          
           <table className="w-full p-5  mt-10 border-none border-spacing-0  ">
             <thead className=" bg-[#F0F4FE]  font-light">
-              <tr className=" font-light">
-                <th className="">
-                  <img src={box} alt="box-icon" className=" min-w-[15px] w-[20px]"/>
-                  </th>
-                {headingData.map((item, index) => (
-                  <th key={index} className="font-[600] text-nowrap py-4 text-[#595959]">
-                    {item} 
-                  </th>
-                ))}
-              </tr>        
+                <tr className=" font-light">
+                  <th className="">
+                    <img src={box} alt="box-icon" className=" min-w-[14px] w-[20px]"/>
+                    </th>
+                  {headingData.map((item, index) => (
+                    <th key={index} className="font-[600] text-nowrap py-4 text-[#595959]">
+                      {item} 
+                    </th>
+                  ))}
+                </tr>        
             </thead>
-                <tbody>
-                <tr className=" ">
-                  <td ></td>
-               </tr>
-                </tbody>
-          
-              
-          <tbody className="mt-10 bg-white shadow-lg">
-            
-              {products?.map((item:Product, index: number) => (
-                <tr key={item.SKU} className="border-[#CDCFD4] border-b p-5 text-[#262626]  ">
-                  <td>
-                    <img src={box} alt="box-icon" className="min-w-[15px]" />
-                  </td>
-                  <td>{index}.</td>
-                  <td>
-                    <img src={item.Image_1} alt="product-photo" className="  w-[60px] h-[40px] min-w-[40px]  object-cover"/>
-                  </td>
-                  <td>{item.SKU} </td>
-                  <td>{item.Name}</td>
-                  <td>{item.Title}</td>
-                  <td>{item.Description}</td>
-                  <td className=" text-nowrap">{item.Brand}</td>
-                  <td>{item['Cost Price']}</td>
-                  <td>{item.Quantity}</td>
-                  <td className=" text-nowrap">{item.size}</td>
-
+            <tbody>
+                  <tr className=" ">
+                    <td></td>
                 </tr>
-              ))}
             </tbody>
-          
+                              
+            <tbody className=" bg-white shadow-lg">
+            
+                {searchedProduct?.map((item:Product, index: number) => (
+                  <tr key={item.SKU} className="border-[#CDCFD4] border-b  text-[#262626]  ">
+                      <td>
+                        <img src={box} alt="box-icon" className="min-w-[15px]" />
+                      </td>
+                      <td>{index}.</td>
+                      <td>
+                        <img src={item.Image_1} alt="product-photo" className="  w-[60px] h-[40px] min-w-[40px]  object-cover"/>
+                      </td>
+                      <td>{item.SKU} </td>
+                      <td>{item.Name}</td>
+                      <td>{item.Title}</td>
+                      <td>{item.Description}</td>
+                      <td className=" text-nowrap">{item.Brand}</td>
+                      <td>{item['Cost Price']}</td>
+                      <td>{item.Quantity}</td>
+                      <td className=" text-nowrap">{item.size}</td>
+                  </tr>
+                ))}
+            </tbody>
+            
           </table>
       </div>
 

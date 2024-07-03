@@ -20,28 +20,30 @@
 
  td{
   line-height: 1.7;
-  padding: 1em
+  padding: 1em;
+  vertical-align: top;
+  
  }
 th,tr{
     text-align: left;
-    padding: 1.5em 2em;
-    font-size: 0.9rem;
+    padding: 1.6em ;
+    font-size: 0.8rem;
     border-collapse: separate;
     
    
 }
 
 tbody tr:first-child td:first-child {
-  border-top-left-radius: 10px; /* Top left corner */
+  border-top-left-radius: 10px; 
 }
 tbody tr:first-child td:last-child {
-  border-top-right-radius: 10px; /* Top right corner */
+  border-top-right-radius: 10px; 
 }
 tbody tr:last-child td:first-child {
-  border-bottom-left-radius: 10px; /* Bottom left corner */
+  border-bottom-left-radius: 10px; 
 }
 tbody tr:last-child td:last-child {
-  border-bottom-right-radius: 10px; /* Bottom right corner */
+  border-bottom-right-radius: 10px; 
 }
 
 
