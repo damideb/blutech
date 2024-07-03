@@ -76,7 +76,7 @@ export default function TableList() {
                 {searchedProduct?.map((item:Product, index: number) => (
                   <tr key={item.SKU} className="border-[#CDCFD4] border-b  text-[#262626]  ">
                       <td>
-                        <img src={box} alt="box-icon" className="min-w-[15px]" />
+                        <img src={box} alt="box-icon" className="min-w-[14px] w-[15px]" />
                       </td>
                       <td>{index}.</td>
                       <td>

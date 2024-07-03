@@ -41,7 +41,7 @@ export default function Nav() {
     }
 
   return (
-    <nav className='bg-white flex flex-col sm:flex-row gap-5 items-center font-Inter justify-between px-5  p-3 '>
+    <nav className='bg-white flex flex-col sm:flex-row gap-5 items-center font-Inter justify-between px-5  p-4 '>
         <div className=' flex items-center'>
             <img src={logo} alt='company-logo' className='w-[205px]'/> 
         </div>
@@ -49,10 +49,10 @@ export default function Nav() {
         <div className='flex justify-center sm:justify-between flex-wrap sm:flex-nowrap gap-3 w-[95%] sm:w-[70%] ' >
             <div className='relative'>
                 <input placeholder="Search by patients..." type="text" 
-                    className='p-2 pl-9 w-[13em]  md:w-[17em] placeholder:text-[#4F5867] text-[0.8rem] sm:text-[0.9rem]  rounded-lg border-[1.5px] border-[#CDCFD4] focus:outline-none '
+                    className='p-2 pl-10 w-[13em]  md:w-[17em] placeholder:text-[#4F5867] text-[0.8rem] sm:text-[0.9rem]  rounded-lg border-[1.5px] border-[#CDCFD4] focus:outline-none '
                     onChange={handleSearch}
                 />
-                <img src={search} alt='searchIcon' className='absolute top-3 left-2 '/> 
+                <img src={search} alt='searchIcon' className='absolute top-3 left-3 '/> 
             </div>
 
             <div className='flex gap-3 sm:gap-7 items-center'>
