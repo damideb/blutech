@@ -56,7 +56,7 @@ export default function TableList() {
             <thead className=" bg-[#F0F4FE]  font-light">
                 <tr className=" font-light">
                   <th className="">
-                    <img src={box} alt="box-icon" className=" min-w-[14px] w-[20px]"/>
+                    <img src={box} alt="box-icon" className=" min-w-[14px] w-[17px]"/>
                     </th>
                   {headingData.map((item, index) => (
                     <th key={index} className="font-[600] text-nowrap py-4 text-[#595959]">
@@ -85,7 +85,7 @@ export default function TableList() {
                       <td>{item.SKU} </td>
                       <td>{item.Name}</td>
                       <td>{item.Title}</td>
-                      <td>{item.Description}</td>
+                      <td className=" ">{item.Description}</td>
                       <td className=" text-nowrap">{item.Brand}</td>
                       <td>{item['Cost Price']}</td>
                       <td>{item.Quantity}</td>
