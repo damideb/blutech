@@ -56,7 +56,7 @@ export default function TableList() {
             <thead className=" bg-[#F0F4FE]  font-light">
                 <tr className=" font-light">
                   <th className="">
-                    <img src={box} alt="box-icon" className=" min-w-[14px] w-[17px]"/>
+                    <img src={box} alt="box-icon" className=" min-w-[14px] w-[15px]"/>
                     </th>
                   {headingData.map((item, index) => (
                     <th key={index} className="font-[600] text-nowrap py-4 text-[#595959]">
